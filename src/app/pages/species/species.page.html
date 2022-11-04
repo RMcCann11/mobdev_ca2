@@ -1,9 +1,13 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>species</ion-title>
+  <ion-toolbar color = "primary">
+    <ion-title>Species</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item button detail lines="inset" *ngFor="let specimen of (species | async)?.results" (click)="openDetails(specimen)">
+      {{ specimen.name }}
+    </ion-item>
+  </ion-list>
 </ion-content>
