@@ -1,9 +1,25 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>spaceshipDetails</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="/tabs/starships"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ spaceship?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="ion-padding">
+  <ion-card *ngIf="spaceship">
+    <ion-card-content>
+    Model: {{ spaceship.model }}
+    </ion-card-content>
+    <ion-card-content>
+    Length: {{ spaceship.length }}
+    </ion-card-content>
+    <ion-card-content>
+    Hyperdrive Rating: {{ spaceship.hyperdrive_rating }}
+    </ion-card-content>
+    <ion-card-content>
+    Starship Class: {{ spaceship.starship_class }}
+    </ion-card-content>
+    </ion-card>
 </ion-content>
