@@ -1,9 +1,27 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>specimenDetails</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="/tabs/species"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ specimen?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+
+  <ion-card *ngIf="specimen">
+    <ion-card-content>
+    Classification: {{ specimen.classification }}
+    </ion-card-content>
+    <ion-card-content>
+    Designation: {{ specimen.designation }}
+    </ion-card-content>
+    <ion-card-content>
+    Skin Colors: {{ specimen.skin_colors }}
+    </ion-card-content>
+    <ion-card-content>
+    Average Lifespan: {{ specimen.average_lifespan }}
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

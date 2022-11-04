@@ -21,7 +21,7 @@ export class SpeciesPage implements OnInit {
   openDetails(specimen) {
     let split = specimen.url.split('/');
     let specimenId = split[split.length-2];
-    this.router.navigateByUrl(`/tabs/specimen/${specimenId}`);
+    this.router.navigateByUrl(`/tabs/species/${specimenId}`);
     }
 
 }
